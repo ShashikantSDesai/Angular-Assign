@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of data1" [ngClass]="{ 'active-row': user.status === 'active' }">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.gender }}</td>
+      <td>{{ user.status }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="sortByName()">Sort by Name</button>
+
+
+
